@@ -1,0 +1,138 @@
+header {
+	background: #252e30;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 72px;
+	font-weight: bold;
+
+	&__logo {
+		text-transform: uppercase;
+		color: $c-main;
+		font-size: 30px;
+		display: flex;
+		line-height: 42px;
+	
+		span {
+			color: #fff;
+		}
+
+		&-icon {
+			width: 42px;
+			background: #4b5456;
+			text-align: center;
+			color: #fff;
+			margin: 0 20px 0 0;
+		}
+	}
+
+	&__navigation {
+		display: none;
+
+		@media (min-width: 992px) {
+			display: block;
+		}
+	}
+
+	&__item {
+		@extend %link;
+		margin: 0 16px;
+		&Contact {
+			margin-right: 0;
+		}
+	}
+
+	&__menu {
+		position: relative;
+		align-self: stretch;
+
+		&-burger {
+			color: #fff;
+			font-weight: bold;
+			font-size: 20px;
+			height: 100%;
+			text-align: center;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+
+			.burger__line {
+				height: 4px;
+				width: 20px;
+				background: #fff;
+				position: relative;
+
+				&::before {
+					top: -7px;
+				}
+
+				&::after {
+					top: 7px;
+				}
+
+				&::before, &::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					width: 20px;
+					height: 4px;
+					background: #fff;
+					display: block;
+					transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+				}
+
+				&.burger__line-active {
+					background: transparent;
+
+					&::before {
+						transform: rotate(-45deg);
+					}
+
+					&::after {
+						transform: rotate(45deg);
+					}
+
+					&::before, &::after {
+						top: 0;
+						transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+					}	
+				}
+			}
+		}
+
+		&-item {
+			color: #fff;
+		}
+
+		&-nav {
+			opacity: 0;
+			width: 113px;
+			display: flex;
+			flex-direction: column;
+			background-color: #252e30;
+			position: absolute;
+			right: 0;
+			top: 72px;
+			padding: 20px 10px;
+		    box-sizing: content-box;
+		    transition: .3s;
+		    visibility: hidden;
+
+		    &Active {
+		    	visibility: visible;
+		    	opacity: 1;
+		    }
+		}
+
+		@media(min-width: 992px) {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,74 @@
+.about {
+	background-color: #f2f2f1;
+	overflow: hidden;
+
+	&__block {
+		color: $c-main-text;
+		font-size:18px;
+		padding: 100px 0;
+
+		&-title {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__items {
+		margin-top: 72px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__image {
+		background-image: url(images/person.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		width: 490px;
+		height: 754px;
+		margin-right: 80px;
+		float: left;
+	}
+
+	&__item {
+		display: flex;
+
+		&-first {
+			margin-bottom: 52px;
+		}
+
+		&-img {
+			margin-right: 20px;
+			background-repeat: no-repeat;
+			width: 41px;
+			height: 45px;
+
+			&-1 {
+				background-image: url(images/icon-1.png);
+			}
+
+			&-2 {
+				background-image: url(images/icon-2.png);
+			}
+
+			&-3 {
+				background-image: url(images/icon-3.png);
+			}
+
+			&-4 {
+				background-image: url(images/icon-4.png);
+			}
+		}
+
+		&-title {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 22px;
+			font-weight: bold;
+			margin-bottom: 18px;
+		}
+	}
+
+	&__item-title, &__block-title {
+		color: #566366;
+	}
+}

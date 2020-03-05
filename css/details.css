@@ -1,0 +1,22 @@
+.details__info {
+  padding: 98px 0; }
+
+.details__block {
+  display: inline-block;
+  color: #919191;
+  margin-left: 46px;
+  width: 350px; }
+
+.details__block:first-child {
+  margin-left: 0; }
+
+.details__block-title {
+  color: #566366;
+  margin-bottom: 48px; }
+
+.details__block-description {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 28px; }
+
+/*# sourceMappingURL=details.css.map */

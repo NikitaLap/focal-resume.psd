@@ -1,0 +1,60 @@
+.top__block {
+	height: 1000px;
+	background: url(images/background.png);
+	font-weight: bold;
+	padding-top: 500px;
+	background-size: 100% 100%;
+
+	.container {
+		position: relative;
+		height: 100%;
+	}
+
+	&-slides {
+		position: absolute;
+		right: 0;
+		bottom: 60px;
+	}
+
+	&-slide {
+		width: 11px;
+		height: 11px;
+		border: 2px solid #2ecc71;
+		border-radius: 50%;
+		cursor: pointer;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&.active {
+			background: #fff;
+		}
+	}
+
+	&-title {
+		font-size: 60px;
+		border-top: 2px solid #fff;
+		border-bottom: 2px solid #fff;
+		width: 739px;
+		margin: 0 auto 50px auto;
+		padding: 8px 0;
+		color: #fff;
+	}
+
+	&-btn {
+		font-size: 18px;
+		border: 2px solid #fff;
+		width: 185px;
+		line-height: 56px;
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+		transition: 1s all;
+
+		&:hover {
+			background: rgba(155, 155, 155, 0.9);
+			border: 2px solid #999;
+		}
+	}
+}

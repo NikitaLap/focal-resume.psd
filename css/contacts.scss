@@ -1,0 +1,94 @@
+.contacts {
+	padding: 100px 0;
+	background: $c-gray;
+	color: #fff;
+
+	&__title {
+		font-size: 30px;
+		font-weight: bold;
+	}
+}
+
+
+.contact {
+	display: flex;
+	justify-content: space-between;
+	font-size: 18px;
+
+	&__info {
+		color: #7a7b7b;
+		line-height: 31px;
+	}
+
+	&__info, &__form {
+		flex-basis: 47%;
+	}
+
+	&__description, &__location {
+		color: #7a7b7b;
+	}
+
+	&__description {
+		margin: 48px 0;
+	}
+
+	&__location {
+		margin-bottom: 42px;
+	}
+
+	&__emailConnect, &__phoneCommunicate {
+		color: #fff;
+		display: inline-block;
+		width: 88px;
+	}
+
+	&__form {
+		color: #fff;
+
+		input[type="submit"]{
+			background: $c-dark;
+			border: none;
+			font-weight: bold;
+			color: #fff;
+			width: 185px;
+			height: 56px;
+			display: block;
+			cursor: pointer;
+		}	
+
+		label {
+			margin-bottom: 18px;
+		}
+
+		&-area {
+			height: 278px;
+			padding-top: 15px;
+			resize: none;
+		}
+
+		&-input, &-area {
+			width: 100%;
+			outline: none;
+			background: #4b5456;
+			border: none;
+			padding-left: 15px;
+			margin: 20px 0 40px 0;
+		}
+
+		&-input {
+			height: 56px;
+		}
+	}
+}
+
+label {
+	position: relative;
+
+	&::after {
+		content: "*";
+		color: $c-main-text;
+		position: absolute;
+		right: -10px;
+		bottom: 3px;
+	}
+}

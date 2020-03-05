@@ -1,0 +1,44 @@
+.sliders {
+	background: #f2f2f1;
+
+	.slider {
+		text-align: center;
+		padding: 100px 53px;
+
+		&__title {
+			font-size: 18px;
+			margin: 46px 0;
+		}
+
+		&__info {
+			font-size: 24px;
+			font-style: italic;
+			color: $c-main-text;
+		}
+	}
+}
+
+.slick {
+	&-dots {
+		bottom: 80px;
+
+		li button:before {
+			content:'';
+			border-radius: 50%;
+		}
+
+		li.slick-active button:before {
+			background: #2ecc71;
+			opacity: 1;
+		}
+
+		li button {
+			border: 2px solid #2ecc71;
+			border-radius: 50%;
+		}
+	}
+
+	&-dotted.slick-slider {
+		margin-bottom: 0;
+	}
+}
